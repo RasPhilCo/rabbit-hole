@@ -12,17 +12,6 @@ npm install -g down-the-rabbit-hole
 
 Executables higher-up take precedence on `$PATH`.
 
-#### Show the whole $PATH tree
-```bash
-$ rh
-├─ /usr/local/bin
-...
-│  ├─ brew: /usr/local/bin/Homebrew/bin/brew
-...
-├─ /usr/bin
-...
-```
-
 #### Find an executable on $PATH
 ```bash
 $ rh find brew
@@ -32,6 +21,23 @@ $ rh find brew
 ├─ /bin
 ├─ /usr/sbin
 └─ /sbin
+```
+
+#### Show the whole $PATH tree
+```bash
+$ rh
+├─ /usr/local/bin
+│  ├─ ...
+│  ├─ brew: /usr/local/bin/Homebrew/bin/brew
+│  ├─ ...
+├─ /usr/bin
+│  ├─ ...
+├─ /bin
+│  ├─ ...
+├─ /usr/sbin
+│  ├─ ...
+└─ /sbin
+   ├─ ...
 ```
 
 #### Show directories on $PATH only
