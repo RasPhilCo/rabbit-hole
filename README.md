@@ -5,7 +5,7 @@ Find and follow symlinks off `$PATH`
 ## Installation
 
 ```bash
-npm install -g rabbit-hole
+npm install -g down-the-rabbit-hole
 ```
 
 ## Usage
