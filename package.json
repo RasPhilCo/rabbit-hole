@@ -9,6 +9,9 @@
   ],
   "license": "ISC",
   "main": "lib/index.js",
+  "bin": {
+    "rh": "src/index.js"
+  },
   "scripts": {
     "build": "babel src -d lib --ignore '*.test.js'",
     "clean": "rimraf lib",
@@ -17,13 +20,14 @@
     "release": "np"
   },
   "dependencies": {
+    "treeify": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
-    "babel-preset-flow": "^6.23.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-flowtype": "^2.34.0",
