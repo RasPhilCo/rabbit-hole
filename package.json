@@ -1,7 +1,7 @@
 {
   "name": "down-the-rabbit-hole",
   "description": "Find and follow symlinks off $PATH",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Philipe Navarro @RasPhilCo",
   "files": [
     "lib"
