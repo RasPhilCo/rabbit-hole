@@ -60,3 +60,10 @@ $ rh --hide-links # or -h
 ├─ /usr/bin
 ...
 ```
+
+#### Provide a path
+```bash
+$ rh find jest --path='./node_modules'
+└─ /path/to/node_modules
+   └─ jest
+```
