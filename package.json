@@ -1,6 +1,6 @@
 {
   "name": "path-rabbit-hole",
-  "description": "Find executables and follow symlinks on $PATH",
+  "description": "Find any executable on $PATH and view its symlink chain",
   "version": "1.1.1",
   "author": "Philipe Navarro @RasPhilCo",
   "files": [
