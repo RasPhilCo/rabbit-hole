@@ -2,6 +2,16 @@
 
 Find any executable on `$PATH` and view its symlink chain
 
+[![Version](https://img.shields.io/npm/v/rabbit-hole.svg)](https://npmjs.org/package/rabbit-hole)
+[![CircleCI](https://circleci.com/gh/RasPhilCo/rabbit-hole/tree/master.svg?style=shield)](https://circleci.com/gh/RasPhilCo/rabbit-hole/tree/master)
+[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/RasPhilCo/rabbit-hole?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/rabbit-hole/branch/master)
+[![Codecov](https://codecov.io/gh/RasPhilCo/rabbit-hole/branch/master/graph/badge.svg)](https://codecov.io/gh/RasPhilCo/rabbit-hole)
+[![Greenkeeper](https://badges.greenkeeper.io/RasPhilCo/rabbit-hole.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/RasPhilCo/rabbit-hole/badge.svg)](https://snyk.io/test/github/RasPhilCo/rabbit-hole)
+[![Downloads/week](https://img.shields.io/npm/dw/rabbit-hole.svg)](https://npmjs.org/package/rabbit-hole)
+[![License](https://img.shields.io/npm/l/rabbit-hole.svg)](https://github.com/RasPhilCo/rabbit-hole/blob/master/package.json)
+
+
 ## Installation
 
 ```bash
@@ -24,7 +34,7 @@ $ rh
 
 #### Find an executable on $PATH
 ```bash
-$ rh find brew
+$ rh brew
 ├─ /usr/local/bin
 │  └─ brew
 │     └─ /usr/local/Homebrew/bin/brew
@@ -36,7 +46,7 @@ $ rh find brew
 
 #### Provide a path to search through
 ```bash
-$ rh find jest --path='./node_modules/.bin'
+$ rh jest --path='./node_modules/.bin'
 └─ /path/to/node_modules/.bin
    └─ jest
       └─ /path/to/node_modules/jest-cli/bin/jest.js
@@ -44,10 +54,10 @@ $ rh find jest --path='./node_modules/.bin'
 
 #### Find all executables & symlinks on $PATH
 ```bash
-$ rh find-all
+$ rh --find-all # or -a
 ```
 
 #### Find all executables but hide symlinks
 ```bash
-$ rh find-all --hide-symlinks # or -h
+$ rh -a --hide-symlinks # or -d
 ```
