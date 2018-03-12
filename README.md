@@ -59,5 +59,5 @@ $ rh --find-all # or -a
 
 #### Find all executables but hide symlinks
 ```bash
-$ rh -a --hide-symlinks # or -d
+$ rh -a --hide-symlinks # or -h
 ```

@@ -15,7 +15,7 @@ describe('path-rabbit-hole', () => {
   .do(() => cmd.run(['tar']))
   .it('finds executable', ctx => {
     expect(ctx.stdout).to.match(/├─ (\/usr)?\/bin/)
-    expect(ctx.stdout).to.contain('│  └─ tar\n')
+    expect(ctx.stdout).to.match(/(│)?(\s){2,3}└─ tar/)
     expect(ctx.stdout).to.match(/(│     └─ bsdtar)?/)
   })
 
@@ -30,7 +30,7 @@ describe('path-rabbit-hole', () => {
 
   test
   .stdout()
-  .do(() => cmd.run(['-a', '-d']))
+  .do(() => cmd.run(['-a', '-h']))
   .it('finds all but hides symlinks', ctx => {
     expect(ctx.stdout).to.contain('├─ apt')
   })

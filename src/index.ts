@@ -29,7 +29,7 @@ class PathRabbitHole extends Command {
     version: flags.version(),
     help: flags.help(),
     path: flags.string({char: 'p', description: 'path string to traverse'}),
-    'hide-symlinks': flags.boolean({char: 'd'}),
+    'hide-symlinks': flags.boolean({char: 'h'}),
     'find-all': flags.boolean({char: 'a'})
   }
 
