@@ -7,17 +7,16 @@ describe('path-rabbit-hole', () => {
   .stdout()
   .do(() => cmd.run([]))
   .it('shows dirs on path', ctx => {
-    expect(ctx.stdout).to.contain('├─ /usr/bin\n├─ /bin\n')
+    expect(ctx.stdout).to.match(/├─ \/usr\/bin\n├─ \/(s)?bin\n/)
   })
 
   test
   .stdout()
   .do(() => cmd.run(['tar']))
   .it('finds executable', ctx => {
-    expect(ctx.stdout).to.contain(`├─ /usr/bin
-│  └─ tar
-│     └─ bsdtar
-`)
+    expect(ctx.stdout).to.match(/├─ (\/usr)?\/bin/)
+    expect(ctx.stdout).to.contain('│  └─ tar\n')
+    expect(ctx.stdout).to.match(/(│     └─ bsdtar)?/)
   })
 
   test
