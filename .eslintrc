@@ -1,12 +1,3 @@
 {
-  "extends": [
-    "plugin:jest/recommended",
-    "standard"
-  ],
-  "env": {
-    "jest": true
-  },
-  "plugins": [
-    "jest"
-  ]
+  "extends": "oclif"
 }
